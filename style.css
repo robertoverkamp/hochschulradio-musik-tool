@@ -1,0 +1,228 @@
+/* Schriftart einbinden */
+@font-face {
+    font-family: 'KlarheitGrotesk';
+    src: url('ESKlarheitGrotesk-Bk.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'KlarheitGrotesk-Plakat';
+    src: url('ESKlarheitPlakat-Blk.ttf');
+}
+
+html, body {
+    overflow: hidden; /* Verhindert das Scrollen */
+    height: 100%;     /* Vollständige Höhe */
+  }
+
+body {
+    font-family: 'KlarheitGrotesk';
+    margin: 20;
+    background-color: #ececec;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.headLineAndUI {
+    display: flex;             /* Flexbox-Layout */
+    flex-direction: column;       /* Spalten nebeneinander */
+    justify-content: center;
+    align-items: normal;
+}
+
+#ui-elements {
+    display: flex;             /* Flexbox-Layout */
+    flex: 1; 
+    flex-direction: row;       /* Spalten nebeneinander */
+    gap: 10px;                 /* Abstand zwischen den Spalten */
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Hier sind die Einstellungen der zwei Ui-Spalten */
+.column {    
+    width: 200;
+}
+
+.bento-box {
+    background-color: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+#artboard {
+    margin-top:5px;
+    margin-right: 10px;
+    display: flex;
+    flex: 1; 
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    scale: 0.96;
+}
+
+h1 {
+    line-height: 0.9;
+    font-family: 'KlarheitGrotesk-Plakat';
+    font-weight: 100;
+    margin: 0;
+}
+
+h3 {
+    font-family: 'KlarheitGrotesk-Plakat';
+    font-size: 15px;
+    font-weight: 100;
+    margin: 0px;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+label {
+    display: block;
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 15;
+}
+
+.bottom-object {
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 2px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 1.5px solid #000000;
+    padding: 10px 12px;
+    border-radius: 0px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.settings-section {
+    margin-bottom: 20px;
+}
+
+
+input[type="range"] {
+    -webkit-appearance: none;  /* Entfernt das Standard-Design in WebKit-Browsern (z. B. Chrome, Safari) */
+    appearance: none;          /* Entfernt das Standard-Design in allen Browsern */
+    width: 100%;               /* Volle Breite des Sliders */
+    height: 1px;               /* Höhe der Linie */
+    background-color: black;   /* Schwarze Linie */
+    border-radius: 2px;
+    outline: none;             /* Kein Rand beim Fokus */
+}
+
+
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;  /* Entfernt Standard-Design des Schiebepunkts */
+    appearance: none;
+    width: 14px;               /* Breite des Punkts */
+    height: 14px;              /* Höhe des Punkts */
+    background-color: black;   /* Schwarzer Punkt */
+    border-radius: 50%;        /* Runde Form */
+    cursor: pointer;           /* Zeigt "Finger"-Cursor */
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background-color: black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="range"]::-ms-thumb {
+    width: 16px;
+    height: 16px;
+    background-color: black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+select {
+    appearance: none;            /* Entfernt das native Aussehen */
+    -webkit-appearance: none;    /* Entfernt das native Aussehen in Safari/Chrome */
+    -moz-appearance: none;       /* Entfernt das native Aussehen in Firefox */
+    width: 100%;
+    padding: 5px 10px;
+    border: 1.5px solid #000000;
+    border-radius: 0px;          /* Abgerundete Kanten */
+    background-color: white;
+    font-size: 15px;
+    color: #000000;
+    cursor: pointer;
+    background-image: url('Vector.svg'); /* Pfeil als SVG */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+}
+
+select option {
+    background-color: white;   /* Hintergrund der Option */
+    color: #333;               /* Schriftfarbe */
+    padding: 10px;             /* Abstand */
+}
+
+select:hover {
+    border-color: #000000;
+}
+
+select:focus {
+    outline: none;
+    border-color: #000000;
+}
+
+input[type="text"], textarea {
+    width: 100%;             /* Volle Breite */
+    padding: 10px 15px;      /* Innenabstand */
+    border: 1.5px solid #000000;  /* Standard-Randfarbe */
+    border-radius: 0px;      /* Abgerundete Kanten */
+    background-color: white; /* Hintergrundfarbe */
+    font-size: 15px;         /* Schriftgröße */
+    color: #000000;             /* Textfarbe */
+}
+
+input[type="file"] {
+    appearance: none;          /* Entfernt das Standarddesign */
+    -webkit-appearance: none;  /* Entfernt das Standarddesign in Safari/Chrome */
+    -moz-appearance: none;     /* Entfernt das Standarddesign in Firefox */
+    width: 100%;
+    padding: 10px 15px;
+    border: 1.5px solid #000000;
+    border-radius: 0px;        /* Abgerundete Kanten */
+    background-color: white;
+    font-size: 15px;
+    color: #000000;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    appearance: none;         /* Entfernt das Standard-Design */
+    width: 20px;              /* Breite der Checkbox */
+    height: 20px;             /* Höhe der Checkbox */
+    border: 1.5px solid #000000;   /* Rahmen der Checkbox */
+    border-radius: 0px;       /* Optionale abgerundete Kanten */
+    background-color: white;  /* Hintergrundfarbe */
+    cursor: pointer;          /* Zeiger wird zur Hand */
+}
+
+input[type="checkbox"]:checked {
+    background-color: #000000; /* Hintergrundfarbe, wenn angeklickt */
+    border-color: #000000;     /* Rahmenfarbe, wenn angeklickt */
+}
